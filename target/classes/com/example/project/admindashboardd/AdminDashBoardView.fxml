@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminpanel" prefHeight="528.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.admindashboard.AdminDashBoardController">
+   <children>
+      <ImageView fitHeight="545.0" fitWidth="914.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@admin.png" />
+         </image>
+      </ImageView>
+       <Button fx:id="idOpenCustomerEnrollment" disable="true" layoutX="326.0" layoutY="162.0" mnemonicParsing="false" onAction="#doOpenCustomerEnrollment" prefHeight="37.0" prefWidth="174.0" text="Customer Enrollment">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+       <Button fx:id="idOpenGetReadyProducts" disable="true" layoutX="325.0" layoutY="328.0" mnemonicParsing="false" onAction="#doOpenGetReadyProducts" prefHeight="37.0" prefWidth="174.0" text="Get Ready Products">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+       <Button fx:id="idOpenOrderDeliveryPanel" disable="true" layoutX="325.0" layoutY="384.0" mnemonicParsing="false" onAction="#doOpenOrderDeliveryPanel" prefHeight="37.0" prefWidth="174.0" text="Order Delivery Panel">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+       <Button fx:id="idOpenItemRecords" disable="true" layoutX="326.0" layoutY="438.0" mnemonicParsing="false" onAction="#doOpenItemRecords" prefHeight="37.0" prefWidth="174.0" text="Items Records">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+       <Button fx:id="idOpenMeasurements" disable="true" layoutX="325.0" layoutY="274.0" mnemonicParsing="false" onAction="#doOpenMeasurements" prefHeight="37.0" prefWidth="174.0" text="Measurements">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+       <Button fx:id="idOpenWorkerTable" disable="true" layoutX="325.0" layoutY="107.0" mnemonicParsing="false" onAction="#doOpenWorkerTable" prefHeight="37.0" prefWidth="174.0" text="Worker Table">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+       <Button fx:id="idOpenWorkerConsole" disable="true" layoutX="325.0" layoutY="219.0" mnemonicParsing="false" onAction="#doOpenWorkerConsole" prefHeight="37.0" prefWidth="174.0" text="Worker Console ">
+           <font>
+               <Font size="16.0" />
+           </font>
+       </Button>
+      <Label layoutX="724.0" layoutY="166.0" text="LogIn" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="45.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="685.0" layoutY="275.0" promptText="Username">
+         <font>
+            <Font name="Times New Roman Italic" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" layoutX="685.0" layoutY="331.0" promptText="Passcode">
+         <font>
+            <Font name="Times New Roman Italic" size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="50.0" fitWidth="64.0" layoutX="756.0" layoutY="389.0" onMouseClicked="#doEnableAllButtons" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@login.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblWorkersfree" layoutX="96.0" layoutY="197.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtpendingorders" layoutX="554.0" layoutY="510.0" prefHeight="26.0" prefWidth="52.0" style="-fx-background-color: transparent; -fx-padding: 0; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></TextField>
+      <Label layoutX="60.0" layoutY="373.0" text="Total Workers" textFill="#fff7f7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="267.0" text="Worker Avail." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="165.0" text="ProcessingOrders" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="111.0" text="PROGRESS" textFill="#fffdfd">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="392.0" layoutY="514.0" text="Pending Orders: " textFill="#fffdfd">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="1.0" layoutY="502.0" mnemonicParsing="false" onAction="#doDisable" prefHeight="15.0" prefWidth="102.0" style="-fx-background-color: #ea3d3d; -fx-border-color: white;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" layoutX="44.0" layoutY="160.0" stroke="#fff9f9" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Line endX="100.0" layoutX="144.0" layoutY="201.0" startX="-100.0" stroke="#ffffffe5" strokeWidth="1.5" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" layoutX="44.0" layoutY="263.0" stroke="#fff9f9" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Line endX="100.0" layoutX="144.0" layoutY="304.0" startX="-100.0" stroke="#ffffffe5" strokeWidth="1.5" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="87.0" layoutX="44.0" layoutY="371.0" stroke="#fff9f9" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Line endX="100.0" layoutX="141.0" layoutY="407.0" startX="-97.00000762939453" stroke="#ffffffe5" strokeWidth="1.5" />
+      <TextField fx:id="txtProcessOrders" alignment="CENTER" layoutX="50.0" layoutY="203.0" prefHeight="26.0" prefWidth="188.0" style="-fx-padding: 0; -fx-background-color: transparent; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtWorkerAvail" alignment="CENTER" layoutX="50.0" layoutY="307.0" prefHeight="26.0" prefWidth="188.0" style="-fx-padding: 0; -fx-background-color: transparent; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTotalOrdersDone" alignment="CENTER" layoutX="50.0" layoutY="410.0" prefHeight="26.0" prefWidth="188.0" style="-fx-padding: 0; -fx-background-color: transparent; -fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </TextField>
+
+   </children>
+</AnchorPane>
